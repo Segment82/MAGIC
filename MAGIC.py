@@ -20,16 +20,13 @@ class Attention(nn.Module):
         
         self.softmax = nn.Softmax(dim=2)
     
-        # if kernel num != 1
+        # if kernel_num != 1
         if K != 1:
             attention_channel = int(K/2)
             self.fc = nn.Conv2d(K, attention_channel, 1, bias=False)
             self.BN_kennel = nn.BatchNorm2d(attention_channel)
             self.relu = nn.ReLU(inplace=False)
             self.kernel_fc = nn.Conv2d(attention_channel, K, 1, bias=False)
-
-        else:
-            self.func_kernel = 1.0
 
         self.temprature=temprature
         assert in_planes>ratio
