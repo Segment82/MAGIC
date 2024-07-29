@@ -9,3 +9,5 @@ This is the implementation of MAGIC: Rethinking Dynamic Convolution Design for M
 <img src="overview.png" width=80% height=90% 
 class="center">
 </p>
+
+More details will be updated later.
